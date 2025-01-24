@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitScape</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <!-- bg-body-tertiary -->
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-background" style="background-color: black;">
+            <div class="container">
+                <!-- Toggler for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Navbar Links on the left -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#" style="color: whitesmoke;">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" style="color: whitesmoke; margin-left: 30px;">Articles</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" style="color: whitesmoke; margin-left: 30px;">For Trainers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" style="color: whitesmoke; margin-left: 30px;">Personal Coach</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: whitesmoke; margin-left: 30px;">Group</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Create Group</a></li>
+                                <li><a class="dropdown-item" href="#">Join a Group</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+        
+                    <!-- sign-in-button on the right -->
+                    <ul class="navbar-nav">
+                        <li><button class="btn btn-outline-light sign-in-btn ">Sign In</button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+         <!-- Popup Container -->
+   
+         <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-content">
+              <div class="popup-header">
+                <h2>Welcome to FitScape</h2>
+                <p>Please Login or Register to continue</p>
+              </div>
+          
+              <!-- Popup Body -->
+              <div class="popup-body">
+                <!-- Error Messages -->
+                <div id="errorMessages" class="error-messages" style="display: none;"></div>
+          
+                <!-- Success Message -->
+                <div id="successMessage" style="display: none; color: blue; font-weight: bold;"></div>
+          
+                <!-- Login/Register Option Buttons -->
+                <div class="popup-options">
+                  <button class="popup-option-btn active" id="loginTabBtn">Login</button>
+                  <button class="popup-option-btn" id="registerTabBtn">Register</button>
+                </div>
+          
+                <!-- Login Form -->
+                <form id="loginForm" class="form-section" action="/login" method="post">
+                  <input type="email" placeholder="Email Address" id="loginEmail" name="email" required>
+                  <input type="password" placeholder="Password" id="loginPassword" name="password" required>
+                  <button type="submit" class="btn btn-primary">Login</button>
+                  <p><a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+                </form>
+          
+                <!-- Register Form -->
+                <form id="registerForm" class="form-section" action="/user/register" method="post" style="display: none;">
+                  <input name="fullname" type="text" placeholder="Full Name" id="registerName" required>
+                  <input name="email" type="email" placeholder="Email Address" id="registerEmail" required>
+                  <input name="password" type="password" placeholder="Create Password" id="registerPassword" required>
+                  <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+          
+                <!-- OTP Form -->
+                <form action="/user/verify-email" method="post" id="otpForm" class="form-section" style="display: none;">
+                  <h3 class="otp-title">Verify Your Email</h3>
+                  <p class="otp-description">We sent a 6-digit OTP to your email. Please enter it below to verify your account.</p>
+          
+                  <!-- OTP Input Fields -->
+                  <div class="otp-input-container">
+                    <input type="text" id="otpInput1" maxlength="1" class="otp-input" required autofocus>
+                    <input type="text" id="otpInput2" maxlength="1" class="otp-input" required>
+                    <input type="text" id="otpInput3" maxlength="1" class="otp-input" required>
+                    <input type="text" id="otpInput4" maxlength="1" class="otp-input" required>
+                    <input type="text" id="otpInput5" maxlength="1" class="otp-input" required>
+                    <input type="text" id="otpInput6" maxlength="1" class="otp-input" required>
+                  </div>
+          
+                  <!-- OTP Resend -->
+                  <p class="otp-resend">
+                    Didn't receive the OTP? <a href="#" id="resendOtpLink">Resend OTP</a>
+                  </p>
+          
+                  <!-- Submit Button -->
+                  <button type="submit" class="btn btn-primary otp-btn">Verify OTP</button>
+          
+                  <div id="otpError" class="otp-error" style="display: none;">Invalid OTP. Please try again.</div>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+          
+
+    
+        
+        
+
+    <!-- Section 1 : Fitscape & Main Image -->
+    <div class="section1">
+        <div class="first">Let us get you ready for your Fitness Journey</div>
+        <div class="section1-fitscape">FitScape</div>
+        <div class="section1-image"><div class="banner-image"></div></div>
+    </div>
+
+    <!-- Section 2 : Banner for Personal Coaching -->
+    <div class="section2">
+        <div class="coaching-image">
+            <div class="section2-button"><button type="button" class="btn btn-outline-danger btn-lg ">Click to Join</button></div>
+            <a href="#">www.fitscape.in</a>
+            <div class="section2-number">+91 987654321</div>
+            <div class="section2-location">CGC LANDRAN</div>
+        </div>
+    </div>
+
+    <!-- Section 3 : Group create-Join cards -->
+    <div class="section3">
+        <div class="card text-end custom-card" style=" border:2px solid white 50px; border-radius: 20px;">
+            <img src="assets/create-group.png" class="card-img-top section3-card-image" alt="Group-creation-image">
+            <div class="card-body">
+                <h2 class="card-title">Create Fitness Group</h2>
+                <p class="card-text">Start a new group for your favorite activity. Set the details, invite others, and work out together</p>
+                <a href="#" class="btn btn-outline-light">Create Group</a>
+            </div>
+        </div>
+        <div class="card text-end custom-card" style=" border:2px solid white 50px; border-radius: 20px;">
+            <img src="assets/join.png" class="card-img-top section3-card-image" alt="Group-creation-image">
+            <div class="card-body">
+                <h2 class="card-title">Join a Fitness Group</h2>
+                <p class="card-text">Find and join a group that matches your fitness interests. Stay motivated and active together</p>
+                <a href="#" class="btn btn-outline-light">Join Group</a>
+            </div>
+        </div>
+        <div class="card text-end custom-card" style=" border:2px solid white 50px; border-radius: 20px;">
+            <img src="assets/idk.png" class="card-img-top section3-card-image" alt="Group-creation-image">
+            <div class="card-body">
+                <h2 class="card-title">Create Fitness Group</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-outline-light">I don't know what to do</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4 : Blogs -->
+    <div class="section4">
+        <div class="quiz-section">
+            <div class="quiz-section-image"></div>
+            <div class="quiz-section-text">
+                <div class="quiz-section-text-1">
+                    Let us make you <p>FitScape</p> all your Health myths
+                </div>
+                <div class="quiz-section-text-2">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button " class="btn btn-danger btn-lg">Go to Article Section</button>
+                        <button type="button " class="btn btn-warning btn-lg " id="center-quiz-button" style="width: 215px;">FitScape quiz</button>
+                        <button type="button " class="btn btn-dark btn-lg" style="width: 215px;">Go to Blog Section</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Section 5 -->
+      <hr>
+      <div class="footer-section5">
+        <div class="footer">
+            <div class="footer-fitscape">
+                Fitscape
+            </div>
+            <div class="footer-section2">
+                <div class="footer-section2-box1">
+                    <div id="footer-section1">
+                        Join us on our mission to make everyone Healthier
+                    </div>
+                    <div id="footer-section1">
+                        supportemail@gmail.com
+                    </div>
+                    <div id="footer-section1">
+                        +91 987654321
+                    </div>
+                    <!-- <div id="div4">
+                        <p>Join us on our mission to make everyone Healthier</p>
+                    </div> -->
+                </div>
+    
+                <div class="footer-section2-boxes">
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">About us</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Become a Coach</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Help</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Support</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Contact us</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Policy</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Legalities</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Legalities</button></div>
+                </div>
+    
+                <div class="footer-section2-boxes">
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">About us</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Become a Coach</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Help</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Support</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Contact us</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Policy</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Legalities</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Legalities</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Legalities</button></div>
+                </div>
+    
+                <div class="footer-section2-boxes">
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">About us</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Become a Coach</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Help</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Support</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Contact us</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Policy</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Legalities</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Legalities</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Legalities</button></div>
+                    <div class="section2-boxes-divs"><button class="footer-section2-btn">Legalities</button></div>
+                </div>
+    
+                <div class="footer-section2-coach ">
+                    <h2>Become <br>FitScape Coach <br>Today</h2>
+                    <div class="custom-button">
+                        <button class="btn btn-outline-light btn-lg">Join us</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+     </div>
+ <script src="javascript/index-script.js"></script>
+ <script src="javascript/login-script.js"></script>
+</body>
+</html>
