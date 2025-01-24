@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindfulConnect - Anonymous Mental Health Support</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="mind.css">
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">FitScape</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="cta-button" id="signup-btn">Sign Up</a></li>
+                <li><a href="#" class="premium-button" id="premium-btn">Premium</a></li>
+                <li class="menu-toggle">
+                    <i class='bx bx-menu'></i>
+                </li>
+                <li class="search-button" id="search-btn">
+                        <i class='bx bx-search-alt'></i>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="searchModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-search-modal">&times;</span>
+                <h2>Search for Support</h2>
+                <input type="text" id="search-input" placeholder="Search..." />
+                <div class="suggestions">
+                    <p>Suggestions:</p>
+                    <div class="suggestion-bubbles">
+                        <div class="suggestion-bubble" data-value="Exam Stress">Exam Stress</div>
+                        <div class="suggestion-bubble" data-value="Divorce Depression">Divorce Depression</div>
+                        <div class="suggestion-bubble" data-value="Seasonal Affective Disorder">Seasonal Affective Disorder</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-menu" id="dropdown-menu">
+            <ul>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#forum">Forum</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#psychiatrists">Our Psychiatrists</a></li>
+                <li><a href="#mood-tracker">Mood Tracker</a></li>
+                <li><a href="#meditation">Meditation</a></li>
+                <li><a href="#journal">Journal</a></li>
+            </ul>
+        </div>
+    </header>
+    
+
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Sign up</h2>
+            <form>
+                <label for="email">Email or Username:</label>
+                <input type="text" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" name="passoword" id="password" required>
+                <a href="#" class="forgot-password">Forgot password?</a>
+                <input type="submit" value="Sign Up" class="submit-btn">
+            </form>
+        </div>
+    </div>
+
+    <div id="premiumModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Premium Features</h2>
+            <div class="premium-feature">
+                <h3>1. One-on-One Video Calls with Psychiatrists</h3>
+                <p>Schedule private video consultations with our expert psychiatrists for personalized care and treatment plans.</p>
+            </div>
+            <div class="premium-feature">
+                <h3>2. Exclusive Content and Resources</h3>
+                <p>Access a library of premium articles, videos, and self-help tools curated by mental health professionals.</p>
+            </div>
+            <div class="premium-feature">
+                <h3>3. Mood Analytics and Advanced Tracking</h3>
+                <p>Gain deeper insights into your mental health with advanced mood tracking and analytics tools.</p>
+            </div>
+            <div class="premium-feature">
+                <h3>4. Priority Access to Professionals</h3>
+                <p>Enjoy reduced wait times and priority booking for video or chat consultations with our mental health experts.</p>
+            </div>
+            <div class="premium-feature">
+                <h3>5. Private One-on-One Chat with Experts</h3>
+                <p>Get personalized support through private chat sessions with licensed mental health professionals.</p>
+            </div>
+            <div class="premium-feature">
+                <h3>6. Ad-Free Experience</h3>
+                <p>Enjoy an uninterrupted, ad-free experience throughout the MindfulConnect platform.</p>
+            </div>
+            <div class="premium-feature">
+                <h3>7. Emergency Support Line</h3>
+                <p>Access a dedicated emergency support line for immediate assistance during crisis situations.</p>
+            </div>
+            <a href="#" class="cta-button">Upgrade to Premium</a>
+        </div>
+    </div>
+    
+    
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="animate-fadeInUp">Anonymous Mental Health Support</h1>
+                    <p class="animate-fadeInUp">Share experiences, seek advice, and connect with professionals in a safe, anonymous environment.</p>
+                    <a href="#" class="cta-button animate-fadeInUp">Join Our Community</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Our Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-user-secret feature-icon"></i>
+                        <h3>Anonymous Sharing</h3>
+                        <p>Share your experiences and thoughts without revealing your identity.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-comments feature-icon"></i>
+                        <h3>Community Support</h3>
+                        <p>Connect with others who understand what you're going through.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-video feature-icon"></i>
+                        <h3>Expert Video Calls</h3>
+                        <p>Schedule secure video sessions with licensed mental health professionals.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-book-open feature-icon"></i>
+                        <h3>Resource Library</h3>
+                        <p>Access a wealth of mental health articles, videos, and self-help tools.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-comment-medical feature-icon"></i>
+                        <h3>Anonymous Chat</h3>
+                        <p>Get immediate support through our anonymous chat feature with professionals.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt feature-icon"></i>
+                        <h3>Safety First</h3>
+                        <p>Our platform prioritizes your safety and privacy with strict moderation and crisis support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2>How It Works</h2>
+                <p>FitScape provides a safe space for mental health support. Here's how you can get started:</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Sign Up Anonymously</h3>
+                        <p>Create an account using just an email address or a secure one-time login.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Join the Community</h3>
+                        <p>Share your experiences or ask for advice in our moderated forums.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Connect with Professionals</h3>
+                        <p>Schedule video calls or use anonymous chat for expert support.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Access Resources</h3>
+                        <p>Explore our library of mental health resources tailored to your needs.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h3>Stay Safe</h3>
+                        <p>Use our safety features, including the crisis button, whenever you need immediate help.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="forum" class="forum">
+            <div class="container">
+                <h2>Mental Health Forum</h2>
+                <p>Join discussions on various mental health topics. Share your experiences and support others in a safe, moderated environment.</p>
+                <div class="forum-categories">
+                    <div class="forum-category">
+                        <i class="fas fa-brain forum-icon"></i>
+                        <h3>Anxiety</h3>
+                        <p>Discuss anxiety-related issues and coping strategies.</p>
+                    </div>
+                    <div class="forum-category">
+                        <i class="fas fa-cloud-rain forum-icon"></i>
+                        <h3>Depression</h3>
+                        <p>Share experiences and find support for depression.</p>
+                    </div>
+                    <div class="forum-category">
+                        <i class="fas fa-balance-scale forum-icon"></i>
+                        <h3>Bipolar Disorder</h3>
+                        <p>Connect with others managing bipolar disorder.</p>
+                    </div>
+                    <div class="forum-category">
+                        <i class="fas fa-hand-holding-heart forum-icon"></i>
+                        <h3>Relationships</h3>
+                        <p>Discuss mental health in the context of relationships.</p>
+                    </div>
+                    <div class="forum-category">
+                        <i class="fas fa-pills forum-icon"></i>
+                        <h3>Medication Support</h3>
+                        <p>Share experiences with mental health medications.</p>
+                    </div>
+                    <div class="forum-category">
+                        <i class="fas fa-heartbeat forum-icon"></i>
+                        <h3>Stress Management</h3>
+                        <p>Learn and share stress reduction techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-call">
+            <div class="container">
+                <div class="video-call-content">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Video call with a therapist" class="video-call-image">
+                    <div class="video-call-text">
+                        <h2>Expert Video Consultations</h2>
+                        <p>Connect with licensed mental health professionals through secure, encrypted video calls. Get the support you need from the comfort of your own space.</p>
+                        <ul>
+                            <li>Schedule sessions at your convenience</li>
+                            <li>Choose from a diverse range of specialists</li>
+                            <li>Ensure privacy with end-to-end encryption</li>
+                            <li>Access follow-up resources after your session</li>
+                        </ul>
+                        <a href="#" class="cta-button">Book a Session</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="resources">
+            <div class="container">
+                <h2>Mental Health Resources</h2>
+                <p>Access a wealth of information and tools to support your mental health journey.</p>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-book resource-icon"></i>
+                        <h3>Articles</h3>
+                        <p>Read expert-written articles on various mental health topics.</p>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-video resource-icon"></i>
+                        <h3>Video Library</h3>
+                        <p>Watch informative videos on mental health management.</p>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-tasks resource-icon"></i>
+                        <h3>Self-Assessment Tools</h3>
+                        <p>Take quizzes to better understand your mental health.</p>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-meditation resource-icon"></i>
+                        <h3>Guided Meditations</h3>
+                        <p>Access a library of calming meditation exercises.</p>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-journal-whills resource-icon"></i>
+                        <h3>Mood Journal</h3>
+                        <p>Track your moods and identify patterns over time.</p>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-users resource-icon"></i>
+                        <h3>Support Groups</h3>
+                        <p>Find and join online support groups for specific issues.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="anonymous-chat">
+            <div class="container">
+                <div class="chat-content">
+                    <div class="chat-text">
+                        <h2>Anonymous Chat Support</h2>
+                        <p>Sometimes, you need immediate support. Our anonymous chat feature connects you with mental health professionals for real-time advice and guidance.</p>
+                        <ul>
+                            <li>Available 24/7</li>
+                            <li>No appointment necessary</li>
+                            <li>Completely anonymous</li>
+                            <li>Staffed by licensed professionals</li>
+                        </ul>
+                        <a href="#" class="cta-button">Start Chat</a>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Anonymous chat support" class="chat-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="safety-features">
+            <div class="container">
+                <h2>Your Safety is Our Priority</h2>
+                <p>We've implemented robust safety measures to ensure a secure and supportive environment for all users.</p>
+                <div class="safety-grid">
+                    <div class="safety-card">
+                        <i class="fas fa-user-shield safety-icon"></i>
+                        <h3>Strict Moderation</h3>
+                        <p>Our team actively monitors all content to maintain a respectful community.</p>
+                    </div>
+                    <div class="safety-card">
+                        <i class="fas fa-lock safety-icon"></i>
+                        <h3>Data Protection</h3>
+                        <p>Your personal information is encrypted and securely stored.</p>
+                    </div>
+                    <div class="safety-card">
+                        <i class="fas fa-exclamation-triangle safety-icon"></i>
+                        <h3>Crisis Support</h3>
+                        <p>Immediate access to crisis resources when you need them most.</p>
+                    </div>
+                    <div class="safety-card">
+                        <i class="fas fa-user-check safety-icon"></i>
+                        <h3>Verified Professionals</h3>
+                        <p>All mental health professionals on our platform are licensed and vetted.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="psychiatrists" class="psychiatrists">
+            <div class="container">
+                <h2>Our Expert Psychiatrists</h2>
+                <p>Meet our team of highly qualified and experienced psychiatrists ready to support you on your mental health journey.</p>
+                <div class="psychiatrist-grid">
+                    <div class="psychiatrist-card">
+                        <img src="https://randomuser.me/api/portraits/women/76.jpg" alt="Dr. Emily Johnson" class="psychiatrist-image">
+                        <h3>Dr. Emily Johnson</h3>
+                        <p><strong>Qualification:</strong> MD, Psychiatry</p>
+                        <p><strong>Speciality:</strong> Anxiety Disorders</p>
+                        <p><strong>Experience:</strong> 15 years</p>
+                        <p>Dr. Johnson is an expert in treating various anxiety disorders and has published numerous research papers on cognitive-behavioral therapy techniques.</p>
+                    </div>
+                    <div class="psychiatrist-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Michael Chen" class="psychiatrist-image">
+                        <h3>Dr. Michael Chen</h3>
+                        <p><strong>Qualification:</strong> PhD, Clinical Psychology</p>
+                        <p><strong>Speciality:</strong> Mood Disorders</p>
+                        <p><strong>Experience:</strong> 12 years</p>
+                        <p>Dr. Chen specializes in treating depression and bipolar disorder. He is known for his integrative approach combining medication management and psychotherapy.</p>
+                    </div>
+                    <div class="psychiatrist-card">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Dr. Sarah Patel" class="psychiatrist-image">
+                        <h3>Dr. Sarah Patel</h3>
+                        <p><strong>Qualification:</strong> MD, Child and Adolescent Psychiatry</p>
+                        <p><strong>Speciality:</strong> Child and Adolescent Mental Health</p>
+                        <p><strong>Experience:</strong> 10 years</p>
+                        <p>Dr. Patel is passionate about helping young people navigate mental health challenges. She has extensive experience in treating ADHD, autism, and eating disorders in children and teenagers.</p>
+                    </div>
+                    <div class="psychiatrist-card">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Dr. Robert Thompson" class="psychiatrist-image">
+                        <h3>Dr. Robert Thompson</h3>
+                        <p><strong>Qualification:</strong> MD, Addiction Psychiatry</p>
+                        <p><strong>Speciality:</strong> Substance Use Disorders</p>
+                        <p><strong>Experience:</strong> 18 years</p>
+                        <p>Dr. Thompson is a leading expert in addiction psychiatry. He has helped countless individuals overcome substance use disorders and co-occurring mental health conditions.</p>
+                    </div>
+                    <div class="psychiatrist-card">
+                        <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Dr. Olivia Martinez" class="psychiatrist-image">
+                        <h3>Dr. Olivia Martinez</h3>
+                        <p><strong>Qualification:</strong> PsyD, Clinical Psychology</p>
+                        <p><strong>Speciality:</strong> Trauma and PTSD</p>
+                        <p><strong>Experience:</strong> 14 years</p>
+                        <p>Dr. Martinez specializes in treating trauma-related disorders. She is trained in EMDR and other evidence-based therapies for PTSD and complex trauma.</p>
+                    </div>
+                    <div class="psychiatrist-card">
+                        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Dr. David Kim" class="psychiatrist-image">
+                        <h3>Dr. David Kim</h3>
+                        <p><strong>Qualification:</strong> MD, Geriatric Psychiatry</p>
+                        <p><strong>Speciality:</strong> Elderly Mental Health</p>
+                        <p><strong>Experience:</strong> 20 years</p>
+                        <p>Dr. Kim is an expert in geriatric psychiatry, focusing on mental health issues in older adults. He has extensive experience in treating dementia, depression, and anxiety in the elderly population.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mood-tracker" class="mood-tracker">
+            <div class="container">
+                <h2>Mood Tracker</h2>
+                <p>Keep track of your emotional well-being and identify patterns in your mood over time.</p>
+                <div class="mood-grid">
+                    <div class="mood-card">
+                        <i class="fas fa-smile mood-icon"></i>
+                        <h3>Daily Check-in</h3>
+                        <p>Log your mood and associated activities each day.</p>
+                    </div>
+                    <div class="mood-card">
+                        <i class="fas fa-chart-line mood-icon"></i>
+                        <h3>Trend Analysis</h3>
+                        <p>Visualize your mood patterns over weeks and months.</p>
+                    </div>
+                    <div class="mood-card">
+                        <i class="fas fa-lightbulb mood-icon"></i>
+                        <h3>Insights</h3>
+                        <p>Receive personalized insights based on your mood data.</p>
+                    </div>
+                    <div class="mood-card">
+                        <i class="fas fa-bell mood-icon"></i>
+                        <h3>Reminders</h3>
+                        <p>Set reminders to log your mood regularly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="meditation" class="meditation">
+            <div class="container">
+                <h2>Guided Meditation</h2>
+                <p>Explore our collection of guided meditations to help reduce stress and improve mental clarity.</p>
+                <div class="meditation-grid">
+                    <div class="meditation-card">
+                        <i class="fas fa-om meditation-icon"></i>
+                        <h3>Mindfulness</h3>
+                        <p>Practice being present in the moment.</p>
+                    </div>
+                    <div class="meditation-card">
+                        <i class="fas fa-bed meditation-icon"></i>
+                        <h3>Sleep</h3>
+                        <p>Improve your sleep quality with relaxing meditations.</p>
+                    </div>
+                    <div class="meditation-card">
+                        <i class="fas fa-heart meditation-icon"></i>
+                        <h3>Self-love</h3>
+                        <p>Cultivate compassion and kindness towards yourself.</p>
+                    </div>
+                    <div class="meditation-card">
+                        <i class="fas fa-brain meditation-icon"></i>
+                        <h3>Focus</h3>
+                        <p>Enhance your concentration and productivity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="journal" class="journal">
+            <div class="container">
+                <h2>Digital Journal</h2>
+                <p>Express your thoughts and feelings in a private, secure digital journal.</p>
+                <div class="journal-grid">
+                    <div class="journal-card">
+                        <i class="fas fa-lock journal-icon"></i>
+                        <h3>Private Entries</h3>
+                        <p>Write confidential journal entries only you can access.</p>
+                    </div>
+                    <div class="journal-card">
+                        <i class="fas fa-tags journal-icon"></i>
+                        <h3>Tagging</h3>
+                        <p>Organize your entries with custom tags for easy reference.</p>
+                    </div>
+                    <div class="journal-card">
+                        <i class="fas fa-search journal-icon"></i>
+                        <h3>Search</h3>
+                        <p>Quickly find past entries with our powerful search feature.</p>
+                    </div>
+                    <div class="journal-card">
+                        <i class="fas fa-cloud-upload-alt journal-icon"></i>
+                        <h3>Cloud Sync</h3>
+                        <p>Access your journal from any device with secure cloud syncing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="community-events" class="community-events">
+            <div class="container">
+                <h2>Community Events</h2>
+                <p>Join virtual events and workshops to connect with others and learn new skills.</p>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <i class="fas fa-users event-icon"></i>
+                        <h3>Support Groups</h3>
+                        <p>Weekly virtual support group meetings for various mental health topics.</p>
+                    </div>
+                    <div class="event-card">
+                        <i class="fas fa-chalkboard-teacher event-icon"></i>
+                        <h3>Workshops</h3>
+                        <p>Interactive workshops on coping strategies and personal growth.</p>
+                    </div>
+                    <div class="event-card">
+                        <i class="fas fa-microphone event-icon"></i>
+                        <h3>Guest Speakers</h3>
+                        <p>Talks by mental health experts and inspirational speakers.</p>
+                    </div>
+                    <div class="event-card">
+                        <i class="fas fa-hands-helping event-icon"></i>
+                        <h3>Peer Support</h3>
+                        <p>Connect one-on-one with trained peer support volunteers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="success-stories" class="success-stories">
+            <div class="container">
+                <h2>Success Stories</h2>
+                <p>Read inspiring stories from community members who have made progress in their mental health journey.</p>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah M." class="testimonial-image">
+                        <h3>Sarah M.</h3>
+                        <p>"FitScape helped me overcome my social anxiety. I'm now confident in social situations."</p>
+                    </div>
+                    <div class="story-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John D." class="testimonial-image">
+                        <h3>John D.</h3>
+                        <p>"Through the support of this community, I've been able to manage my depression and rediscover joy in life."</p>
+                    </div>
+                    <div class="story-card">
+                        <img src="https://randomuser.me/api/portraits/women/95.jpg" alt="Emily R." class="testimonial-image">
+                        <h3>Emily R.</h3>
+                        <p>"The resources here helped me understand and cope with my PTSD. I feel like I'm finally healing."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mental-health-news" class="mental-health-news">
+            <div class="container">
+                <h2>Mental Health News</h2>
+                <p>Stay informed with the latest research and developments in mental health.</p>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <i class="fas fa-newspaper news-icon"></i>
+                        <h3>Latest Studies</h3>
+                        <p>Summaries of recent mental health research findings.</p>
+                    </div>
+                    <div class="news-card">
+                        <i class="fas fa-pills news-icon"></i>
+                        <h3>Treatment Updates</h3>
+                        <p>Information on new treatments and therapies.</p>
+                    </div>
+                    <div class="news-card">
+                        <i class="fas fa-brain news-icon"></i>
+                        <h3>Neuroscience Insights</h3>
+                        <p>Explore how brain science is advancing mental health understanding.</p>
+                    </div>
+                    <div class="news-card">
+                        <i class="fas fa-globe news-icon"></i>
+                        <h3>Global Initiatives</h3>
+                        <p>Updates on worldwide mental health programs and policies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="self-assessment" class="self-assessment">
+            <div class="container">
+                <h2>Self-Assessment Tools</h2>
+                <p>Take our scientifically validated self-assessment quizzes to gain insights into your mental health.</p>
+                <div class="assessment-grid">
+                    <div class="assessment-card">
+                        <i class="fas fa-clipboard-check assessment-icon"></i>
+                        <h3>Depression Screening</h3>
+                        <p>Assess your risk for depression with our quick questionnaire.</p>
+                    </div>
+                    <div class="assessment-card">
+                        <i class="fas fa-wind assessment-icon"></i>
+                        <h3>Anxiety Test</h3>
+                        <p>Evaluate your anxiety levels and learn about coping strategies.</p>
+                    </div>
+                    <div class="assessment-card">
+                        <i class="fas fa-burn assessment-icon"></i>
+                        <h3>Stress Assessment</h3>
+                        <p>Measure your stress levels and discover stress management techniques.</p>
+                    </div>
+                    <div class="assessment-card">
+                        <i class="fas fa-yin-yang assessment-icon"></i>
+                        <h3>Well-being Index</h3>
+                        <p>Get a comprehensive overview of your mental and emotional well-being.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Our Users Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah M." class="testimonial-image">
+                        <p>"FitScape has been a lifeline for me. The anonymous support and resources have helped me manage my anxiety."</p>
+                        <h4>Sarah M.</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John D." class="testimonial-image">
+                        <p>"The video consultations with professionals have been game-changing. I feel supported and understood."</p>
+                        <h4>John D.</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/women/95.jpg" alt="Emily R." class="testimonial-image">
+                        <p>"The community here is so supportive. It's comforting to know I'm not alone in my struggles."</p>
+                        <h4>Emily R.</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does MindfulConnect ensure anonymity?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>MindfulConnect uses advanced encryption and allows users to create accounts with just an email address. We never share personal information, and users can choose to remain completely anonymous in all interactions on the platform.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are the mental health professionals on the platform licensed?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all mental health professionals on MindfulConnect are licensed and have undergone a thorough vetting process. We verify their credentials and ensure they meet our high standards of care.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly can I connect with a professional through the anonymous chat?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our anonymous chat feature typically connects users with a professional within 5-10 minutes. However, during peak times, it may take a bit longer. Rest assured, we strive to provide support as quickly as possible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is MindfulConnect a substitute for traditional therapy?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While MindfulConnect provides valuable support and resources, it is not intended to replace traditional therapy or medical advice. We encourage users to view our platform as a complementary tool in their mental health journey and to consult with their healthcare providers for personalized treatment plans.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions or feedback? We'd love to hear from you.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MindfulConnect</h3>
+                    <p>Anonymous mental health support and resources.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#forum">Forum</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#psychiatrists">Our Psychiatrists</a></li>
+                        <li><a href="#mood-tracker">Mood Tracker</a></li>
+                        <li><a href="#meditation">Meditation</a></li>
+                        <li><a href="#journal">Journal</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MindfulConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="crisis-button">Need Immediate Help?</a>
+    
+
+    <div id="crisisModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Crisis Support</h2>
+            <p>If you're in immediate danger or need urgent help, please contact emergency services or a crisis helpline:</p>
+            <ul>
+                <li>Emergency Services: 100</li>
+                <li>National Suicide Prevention Lifeline: 1-800-273-8255</li>
+                <li>Crisis Text Line: Text HOME to 741741</li>
+            </ul>
+            <p>Remember, you're not alone. Help is available 24/7.</p>
+        </div>
+    </div>
+
+    
+
+    <script src="mind.js"></script>
+</body>
+</html>
