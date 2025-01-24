@@ -2,14 +2,23 @@
 // So we don't have ridiculous errors.
 window.onload = function() {
     // Your web app's Firebase configuration
+    // const firebaseConfig = {
+    //   apiKey: "AIzaSyAG9TO8WML8vr_NFBidgbd2x_jG9faCRjc",
+    //   authDomain: "fitforge-ed3de.firebaseapp.com",
+    //   projectId: "fitforge-ed3de",
+    //   storageBucket: "fitforge-ed3de.appspot.com",
+    //   messagingSenderId: "489939168231",
+    //   appId: "1:489939168231:web:0ce558e51d5f3731186b42",
+    //   measurementId: "G-C414L58VFJ"
+    // };
     const firebaseConfig = {
-      apiKey: "AIzaSyAG9TO8WML8vr_NFBidgbd2x_jG9faCRjc",
-      authDomain: "fitforge-ed3de.firebaseapp.com",
-      projectId: "fitforge-ed3de",
-      storageBucket: "fitforge-ed3de.appspot.com",
-      messagingSenderId: "489939168231",
-      appId: "1:489939168231:web:0ce558e51d5f3731186b42",
-      measurementId: "G-C414L58VFJ"
+      apiKey: "AIzaSyCJKVppwiMYt3jJVNEMNH0C0b54Irbw-g8",
+      authDomain: "fitscape-c4c6b.firebaseapp.com",
+      projectId: "fitscape-c4c6b",
+      storageBucket: "fitscape-c4c6b.firebasestorage.app",
+      messagingSenderId: "1080622560065",
+      appId: "1:1080622560065:web:61350fa22bdb791646a7c0",
+      measurementId: "G-76YF8SL7WK"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);

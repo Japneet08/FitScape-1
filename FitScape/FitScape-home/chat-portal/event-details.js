@@ -1,16 +1,25 @@
 // Import Firebase functions
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-import { getDatabase, ref, get, update } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+import { getDatabase, ref, get, update } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
 
 // Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBKHchgZEmwnyhHiuRznTGu4LV6kMk1f0Q",
+//   authDomain: "groupchat-b228d.firebaseapp.com",
+//   projectId: "groupchat-b228d",
+//   storageBucket: "groupchat-b228d.appspot.com",
+//   messagingSenderId: "329230089438",
+//   appId: "1:329230089438:web:9954d0746586b3c0b9564f",
+//   measurementId: "G-21YS77WNXG"
+// };
 const firebaseConfig = {
-  apiKey: "AIzaSyBKHchgZEmwnyhHiuRznTGu4LV6kMk1f0Q",
-  authDomain: "groupchat-b228d.firebaseapp.com",
-  projectId: "groupchat-b228d",
-  storageBucket: "groupchat-b228d.appspot.com",
-  messagingSenderId: "329230089438",
-  appId: "1:329230089438:web:9954d0746586b3c0b9564f",
-  measurementId: "G-21YS77WNXG"
+  apiKey: "AIzaSyCJKVppwiMYt3jJVNEMNH0C0b54Irbw-g8",
+  authDomain: "fitscape-c4c6b.firebaseapp.com",
+  projectId: "fitscape-c4c6b",
+  storageBucket: "fitscape-c4c6b.firebasestorage.app",
+  messagingSenderId: "1080622560065",
+  appId: "1:1080622560065:web:61350fa22bdb791646a7c0",
+  measurementId: "G-76YF8SL7WK"
 };
 
 // Initialize Firebase
